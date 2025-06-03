@@ -1,15 +1,13 @@
 package com.gedo.tutorialmod;
 
 import com.gedo.tutorialmod.block.ModBlocks;
+import com.gedo.tutorialmod.item.ModCreativeModeTabs;
 import com.gedo.tutorialmod.item.Moditems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -45,6 +43,8 @@ public class TutorialMod
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         Moditems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
@@ -67,7 +67,8 @@ public class TutorialMod
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            if (ModBlocks.BISMUTH_BLOCK != null) event.accept(ModBlocks.BISMUTH_BLOCK);
+            event.accept(ModBlocks.BISMUTH_BLOCK);
+            event.accept(ModBlocks.BISMUTH_ORE);
         }
 
     }
