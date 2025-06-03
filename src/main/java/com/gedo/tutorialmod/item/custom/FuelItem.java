@@ -5,15 +5,16 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import org.jetbrains.annotations.Nullable;
 
-public class FuleItem extends Item {
-    private int burnTime= 0;
+public class FuelItem extends Item {
+    private int burntTime = 0;
 
-    public FuleItem(Properties properties, int burnTime) {
+    public FuelItem(Properties properties, int burnTime) {
         super(properties);
+        this.burntTime = burnTime;
     }
 
     @Override
     public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
-        return this.burnTime;
+        return this.burntTime;
     }
 }

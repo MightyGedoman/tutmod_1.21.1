@@ -2,7 +2,7 @@ package com.gedo.tutorialmod.item;
 
 import com.gedo.tutorialmod.TutorialMod;
 import com.gedo.tutorialmod.item.custom.ChiselItem;
-import com.gedo.tutorialmod.item.custom.FuleItem;
+import com.gedo.tutorialmod.item.custom.FuelItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -22,7 +22,7 @@ public class Moditems {
 
 
     public static final DeferredItem<Item> FROSTFIRE_ICE = ITEMS.register("frostfire_ice",
-            () -> new FuleItem(new Item.Properties(), 800));
+            () -> new FuelItem(new Item.Properties(), 800));
     public static final DeferredItem<Item> STARLIGHT_ASHES = ITEMS.register("starlight_ashes",
             () -> new Item(new Item.Properties()));
 
