@@ -1,6 +1,7 @@
 package com.gedo.tutorialmod.block;
 
 import com.gedo.tutorialmod.TutorialMod;
+import com.gedo.tutorialmod.block.custom.MagicBlock;
 import com.gedo.tutorialmod.item.Moditems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -25,7 +26,14 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> BISMUTH_ORE = registerBlock("bismuth_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4),
-                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound((SoundType.STONE))));
+                    BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound((SoundType.STONE))));
+
+    public static final DeferredBlock<Block> BISMUTH_DEEPSLATE_ORE = registerBlock("bismuth_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3, 6),
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound((SoundType.DEEPSLATE))));
+
+    public static final  DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block",
+            () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
