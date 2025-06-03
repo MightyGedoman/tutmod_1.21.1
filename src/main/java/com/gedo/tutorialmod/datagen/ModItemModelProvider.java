@@ -30,6 +30,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.BISMUTH_WALL, ModBlocks.BISMUTH_BLOCK);
 
         basicItem(ModBlocks.BISMUTH_DOOR.asItem());
+
     }
 
     public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
