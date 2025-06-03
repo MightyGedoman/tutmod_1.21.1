@@ -41,6 +41,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(recipeOutput, BISMUTH_SMELTABLES, RecipeCategory.MISC, Moditems.BISMUTH.get(), 0.25f, 200, "bismuth");
         oreBlasting(recipeOutput, BISMUTH_SMELTABLES, RecipeCategory.MISC, Moditems.BISMUTH.get(), 0.25f, 100, "bismuth");
+
+        stairBuilder(ModBlocks.BISMUTH_STAIRS.get(), Ingredient.of(Moditems.BISMUTH)).group("bismuth")
+                .unlockedBy("has_bismuth", has(Moditems.BISMUTH)).save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BISMUTH_SLAB.get(), Moditems.BISMUTH.get());
+
+        buttonBuilder(ModBlocks.BISMUTH_BUTTON.get(), Ingredient.of(Moditems.BISMUTH.get())).group("bismuth")
+                .unlockedBy("has_bismuth", has(Moditems.BISMUTH.get())).save(recipeOutput);
+        pressurePlate(recipeOutput, ModBlocks.BISMUTH_PRESSURE_PLATE.get(), Moditems.BISMUTH.get());
+
+        fenceBuilder(ModBlocks.BISMUTH_FENCE.get(), Ingredient.of(Moditems.BISMUTH.get())).group("bismuth")
+                .unlockedBy("has_bismuth", has(Moditems.BISMUTH.get())).save(recipeOutput);
+        fenceGateBuilder(ModBlocks.BISMUTH_FENCE_GATE.get(), Ingredient.of(Moditems.BISMUTH.get())).group("bismuth")
+                .unlockedBy("has_bismuth", has(Moditems.BISMUTH.get())).save(recipeOutput);
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BISMUTH_WALL.get(), Moditems.BISMUTH.get());
+
+        doorBuilder(ModBlocks.BISMUTH_DOOR.get(), Ingredient.of(Moditems.BISMUTH.get())).group("bismuth")
+                .unlockedBy("has_bismuth", has(Moditems.BISMUTH.get())).save(recipeOutput);
+        trapdoorBuilder(ModBlocks.BISMUTH_TRAPDOOR.get(), Ingredient.of(Moditems.BISMUTH.get())).group("bismuth")
+                .unlockedBy("has_bismuth", has(Moditems.BISMUTH.get())).save(recipeOutput);
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
