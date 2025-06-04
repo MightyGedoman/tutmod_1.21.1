@@ -1,6 +1,5 @@
-package com.gedo.tutorialmod.item.custom;
+package com.gedo.tutorialmod.item;
 
-import com.gedo.tutorialmod.item.Moditems;
 import com.gedo.tutorialmod.util.ModTags;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
