@@ -33,7 +33,7 @@ public class Moditems {
     public static final DeferredItem<PickaxeItem> BISMUTH_PICKAXE = ITEMS.register("bismuth_pickaxe",
             () -> new PickaxeItem(ModToolTiers.BISMUTH, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.BISMUTH, 1, -2.8f))));
-    public static final DeferredItem<AxeItem> BISMUTH_AXE = ITEMS.register("bismuth_AXE",
+    public static final DeferredItem<AxeItem> BISMUTH_AXE = ITEMS.register("bismuth_axe",
             () -> new AxeItem(ModToolTiers.BISMUTH, new Item.Properties()
                     .attributes(AxeItem.createAttributes(ModToolTiers.BISMUTH, 6f, -3.2f))));
     public static final DeferredItem<ShovelItem> BISMUTH_SHOVEL = ITEMS.register("bismuth_shovel",
