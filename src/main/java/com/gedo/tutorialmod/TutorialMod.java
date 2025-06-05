@@ -2,8 +2,10 @@ package com.gedo.tutorialmod;
 
 import com.gedo.tutorialmod.block.ModBlocks;
 import com.gedo.tutorialmod.component.ModDataComponent;
+import com.gedo.tutorialmod.effect.ModEffects;
 import com.gedo.tutorialmod.item.ModCreativeModeTabs;
 import com.gedo.tutorialmod.item.Moditems;
+import com.gedo.tutorialmod.potion.ModPotions;
 import com.gedo.tutorialmod.sound.ModSounds;
 import org.slf4j.Logger;
 
@@ -52,6 +54,8 @@ public class TutorialMod
 
         ModDataComponent.register(modEventBus);
         ModSounds.register(modEventBus);
+        ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
