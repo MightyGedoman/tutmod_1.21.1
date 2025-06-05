@@ -2,6 +2,7 @@ package com.gedo.tutorialmod.datagen;
 
 import com.gedo.tutorialmod.TutorialMod;
 import com.gedo.tutorialmod.enchantment.ModEnchantments;
+import com.gedo.tutorialmod.worldgen.ModBiomeModifiers;
 import com.gedo.tutorialmod.worldgen.ModConfiguredFeatures;
 import com.gedo.tutorialmod.worldgen.ModPlacedFeatures;
 import net.minecraft.core.HolderLookup;
@@ -20,7 +21,7 @@ public class ModDatapackProvider extends DatapackBuiltinEntriesProvider {
 
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
-            .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModConfiguredFeatures::bootstrap);
+            .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
 
     public ModDatapackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(TutorialMod.MOD_ID));
