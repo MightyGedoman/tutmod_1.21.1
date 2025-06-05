@@ -3,6 +3,7 @@ package com.gedo.tutorialmod;
 import com.gedo.tutorialmod.block.ModBlocks;
 import com.gedo.tutorialmod.component.ModDataComponent;
 import com.gedo.tutorialmod.effect.ModEffects;
+import com.gedo.tutorialmod.enchantment.ModEnchantmentEffects;
 import com.gedo.tutorialmod.item.ModCreativeModeTabs;
 import com.gedo.tutorialmod.item.Moditems;
 import com.gedo.tutorialmod.potion.ModPotions;
@@ -56,6 +57,8 @@ public class TutorialMod
         ModSounds.register(modEventBus);
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);
+
+        ModEnchantmentEffects.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
