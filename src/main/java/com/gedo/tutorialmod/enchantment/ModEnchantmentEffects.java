@@ -14,11 +14,11 @@ public class ModEnchantmentEffects {
     public static final DeferredRegister<MapCodec<? extends EnchantmentEntityEffect>> ENTITY_ENCHANTMENT_EFFECTS =
             DeferredRegister.create(Registries.ENCHANTMENT_ENTITY_EFFECT_TYPE, TutorialMod.MOD_ID);
 
-    public static final Supplier<MapCodec<? extends  EnchantmentEntityEffect>> LIGHTNING_STRIKER =
+    public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> LIGHTNING_STRIKER =
             ENTITY_ENCHANTMENT_EFFECTS.register("lightning_striker", () -> LightningStrikerEnchantmentEffect.CODEC);
 
-    public static void register(IEventBus eventBus){
-        ENTITY_ENCHANTMENT_EFFECTS.register((eventBus));
+    public static void register(IEventBus eventBus) {
+        ENTITY_ENCHANTMENT_EFFECTS.register(eventBus);
     }
 }
 

@@ -3,6 +3,7 @@ package com.gedo.tutorialmod.block;
 import com.gedo.tutorialmod.TutorialMod;
 import com.gedo.tutorialmod.block.custom.BismuthLampBlock;
 import com.gedo.tutorialmod.block.custom.MagicBlock;
+import com.gedo.tutorialmod.block.custom.RadishCropBlock;
 import com.gedo.tutorialmod.item.Moditems;
 import com.gedo.tutorialmod.sound.ModSounds;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -66,6 +67,9 @@ public class ModBlocks {
     public static final  DeferredBlock<Block> BISMUTH_LAMP = registerBlock("bismuth_lamp",
             () -> new BismuthLampBlock(BlockBehaviour.Properties.of().strength(2f)
                     .requiresCorrectToolForDrops().lightLevel(state -> state.getValue(BismuthLampBlock.CLICKED) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> RADISH_CROP = BLOCKS.register("radish_crop",
+            () -> new RadishCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BEETROOTS)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

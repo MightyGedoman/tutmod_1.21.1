@@ -1,6 +1,7 @@
 package com.gedo.tutorialmod.item;
 
 import com.gedo.tutorialmod.TutorialMod;
+import com.gedo.tutorialmod.block.ModBlocks;
 import com.gedo.tutorialmod.item.custom.ChiselItem;
 import com.gedo.tutorialmod.item.custom.FuelItem;
 import com.gedo.tutorialmod.item.custom.HammerItem;
@@ -60,6 +61,9 @@ public class Moditems {
     public static final DeferredItem<ArmorItem> BISMUTH_BOOTS = ITEMS.register("bismuth_boots",
             () -> new ModArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+
+    public static final DeferredItem<Item> RADISH_SEEDS = ITEMS.register("radish_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.RADISH_CROP.get(), new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

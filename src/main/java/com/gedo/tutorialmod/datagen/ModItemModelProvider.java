@@ -49,6 +49,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(Moditems.FROSTFIRE_ICE.get());
         basicItem(Moditems.CHISEL.get());
 
+        basicItem(Moditems.RADISH_SEEDS.get());
+
         buttonItem(ModBlocks.BISMUTH_BUTTON, ModBlocks.BISMUTH_BLOCK);
         fenceItem(ModBlocks.BISMUTH_FENCE, ModBlocks.BISMUTH_BLOCK);
         wallItem(ModBlocks.BISMUTH_WALL, ModBlocks.BISMUTH_BLOCK);

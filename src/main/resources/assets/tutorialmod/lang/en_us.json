@@ -6,6 +6,8 @@
   "item.tutorialmod.frostfire_ice": "FrostFire Ice",
   "item.tutorialmod.starlight_ashes": "Starlight Ashes",
 
+  "item.tutorialmod.radish_seeds": "Radish Seeds",
+
 
   "item.tutorialmod.bismuth_sword": "Bismuth Sword",
   "item.tutorialmod.bismuth_pickaxe": "Bismuth Pickaxe",
@@ -52,6 +54,9 @@
   "enchantment.tutorialmod.lightning_striker": "Lightning Striker",
 
   "block.tutorialmod.bismuth_lamp": "Bismuth Lamp",
+
+  "block.tutorialmod.radish_seeds": "Radish Seeds",
+
 
   "tooltip.tutorialmod.magic_block.tooltip": "This Block is very §9MAGICAL§r",
   "tooltip.tutorialmod.chisel.shift_down": "This Item can chisel Blocks into Bricks",
