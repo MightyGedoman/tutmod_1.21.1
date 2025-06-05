@@ -4,6 +4,7 @@ import com.gedo.tutorialmod.TutorialMod;
 import com.gedo.tutorialmod.block.custom.BismuthLampBlock;
 import com.gedo.tutorialmod.block.custom.MagicBlock;
 import com.gedo.tutorialmod.item.Moditems;
+import com.gedo.tutorialmod.sound.ModSounds;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -34,7 +35,7 @@ public class ModBlocks {
                     BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound((SoundType.DEEPSLATE))));
 
     public static final  DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block",
-            () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
+            () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().sound(ModSounds.MAGIC_BLOCK_SOUNDS)));
 
     public static final DeferredBlock<StairBlock> BISMUTH_STAIRS = registerBlock("bismuth_stairs",
             () -> new StairBlock(ModBlocks.BISMUTH_BLOCK.get().defaultBlockState(),

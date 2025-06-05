@@ -4,6 +4,7 @@ import com.gedo.tutorialmod.block.ModBlocks;
 import com.gedo.tutorialmod.component.ModDataComponent;
 import com.gedo.tutorialmod.item.ModCreativeModeTabs;
 import com.gedo.tutorialmod.item.Moditems;
+import com.gedo.tutorialmod.sound.ModSounds;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -50,6 +51,7 @@ public class TutorialMod
         ModBlocks.register(modEventBus);
 
         ModDataComponent.register(modEventBus);
+        ModSounds.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
