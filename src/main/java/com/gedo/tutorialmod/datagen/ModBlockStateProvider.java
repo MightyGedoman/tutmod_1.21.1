@@ -53,6 +53,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customLamp();
 
         makeCrop((CropBlock)(ModBlocks.RADISH_CROP.get()), "radish_crop_stage", "radish_crop_stage");
+
+        blockWithItem(ModBlocks.BISMUTH_END_ORE);
+        blockWithItem(ModBlocks.BISMUTH_NETHER_ORE);
     }
 
     public void makeCrop(CropBlock block, String modelName, String textureName) {
